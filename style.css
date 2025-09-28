@@ -430,3 +430,38 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* ===== Hero (profile) centered with no image ===== */
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px); /* adjust if your header height differs */
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+}
+
+#profile .section__text { max-width: 900px; }
+#profile .section__text__p1,
+#profile .title,
+#profile .section__text__p2 { text-align: center; }
+
+#profile .btn-container {
+  display: flex;            /* ensure flex for centering */
+  justify-content: center;  /* center buttons */
+  gap: 1rem;
+}
+
+#socials-container {
+  display: flex;            /* ensure flex for centering */
+  justify-content: center;  /* center social icons */
+  gap: 1rem;
+}
+
+/* Safety: if any leftover hero image container exists, hide it */
+#profile .section__pic-container { display: none !important; }
+
+
+
+
