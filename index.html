@@ -77,57 +77,77 @@
 
     <!-- ABOUT -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-
-      <div class="section-container">
-        <div class="section__pic-container">
-          <!-- Optional headshot; keep placeholder or replace with your own -->
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+    
+      <!-- Centered intro (no small lead-in text, no image) -->
+      <div class="about-intro">
+        <p>
+          I’m an MSc Data Science candidate at the University of Greenwich (expected Sep 2025).
+          I build practical ML & NLP systems, ship reliable full-stack apps, and enjoy the engineering
+          behind real-time multiplayer experiences. Recent work includes AI response quality evaluation
+          at Outlier AI and analytics/dashboards at Systech Datasoft. I also design scalable, interactive
+          projects—like a real-time multiplayer card game and an AI-powered resume evaluator.
+        </p>
+      </div>
+    
+      <!-- Two concise, recruiter-friendly cards -->
+      <div class="about-grid">
+        <!-- Experience -->
+        <div class="details-container">
+          <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+          <h3>Experience</h3>
+          <ul class="about-list">
+            <li>
+              <strong>Outlier AI — AI Response QA</strong> (2024)<br />
+              Evaluated model outputs for intent/location alignment; delivered clear, actionable feedback
+              to improve accuracy and relevance.
+            </li>
+            <li>
+              <strong>Systech Datasoft — Data Science Trainee</strong> (2023–2024)<br />
+              Completed the EDGE program; built analytics dashboards (Tableau/Power BI), cleaned datasets,
+              and supported data-driven planning.
+            </li>
+            <li>
+              <strong>Independent Projects — Full-stack & Realtime</strong><br />
+              Real-time multiplayer web game (React, Node/Express, MongoDB, Socket.io) and
+              an AI resume–job fit evaluator (Python, NLP, ML).
+            </li>
+          </ul>
         </div>
-
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>AI QA • Data Analytics • Full-stack/Realtime</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>
-                MSc Data Science — University of Greenwich (Expected Sep 2025)<br />
-                BSc Computer Science &amp; Engineering — North South University (2023)
-              </p>
-            </div>
-          </div>
-
-          <div class="text-container">
-            <p>
-              I’m a Data &amp; AI generalist with a gaming streak — completing an MSc in Data Science
-              at the University of Greenwich. I build practical ML + NLP systems (resume–job match with
-              SBERT + XGBoost), ship reliable web backends, and enjoy the engineering behind real-time
-              multiplayer experiences. Professional impact: AI response quality at Outlier AI; data analysis
-              and dashboards at Systech Datasoft. Stack: Python/R/TensorFlow/PyTorch; React/Node/MongoDB;
-              Android/Firebase.
-            </p>
-          </div>
+    
+        <!-- Education -->
+        <div class="details-container">
+          <img src="./assets/education.png" alt="Education icon" class="icon" />
+          <h3>Education</h3>
+          <ul class="about-list">
+            <li>
+              <strong>MSc, Data Science — University of Greenwich (London)</strong><br />
+              <em>Expected Sep 2025</em><br />
+              Selected coursework: Machine Learning, Data Visualization, Time-Series, Graph/Modern DBs, Big Data.
+            </li>
+            <li>
+              <strong>BSc, Computer Science & Engineering (AI/ML) — North South University</strong><br />
+              <em>2023</em><br />
+              Core studies: AI, ML, Data Structures & Algorithms, Databases, Algorithm Design, OS, Software Engineering.
+            </li>
+          </ul>
         </div>
       </div>
-
+    
+      <!-- Optional quick-scan skill chips (single glance for recruiters) -->
+      <ul class="chip-list">
+        <li class="chip">Python</li>
+        <li class="chip">TensorFlow</li>
+        <li class="chip">PyTorch</li>
+        <li class="chip">SQL</li>
+        <li class="chip">React</li>
+        <li class="chip">Node/Express</li>
+        <li class="chip">MongoDB</li>
+        <li class="chip">Socket.io</li>
+        <li class="chip">Tableau</li>
+        <li class="chip">Power BI</li>
+      </ul>
+    
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -135,6 +155,7 @@
         onclick="location.href='./#experience'"
       />
     </section>
+
 
     <!-- EXPERIENCE -->
     <section id="experience">
