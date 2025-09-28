@@ -463,5 +463,96 @@ footer p {
 #profile .section__pic-container { display: none !important; }
 
 
+/* ===== About section: centered, image-free, recruiter-friendly ===== */
+#about {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+#about .title {
+  margin-bottom: 1.25rem;
+}
+
+/* Centered intro paragraph width */
+.about-intro {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+}
+.about-intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Two-card grid: stacks on mobile, 2 cols on desktop */
+.about-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 1.5rem auto;
+}
+@media (min-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Use existing card look, just tweak inner spacing */
+#about .details-container {
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+}
+#about .details-container h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+#about .details-container .icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Bullet lists inside cards */
+#about .about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#about .about-list li {
+  margin: 0 0 0.85rem 0;
+  line-height: 1.65;
+}
+#about .about-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Skill chips (1-line on wide screens, wraps on small) */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0.5rem auto 0;
+  padding: 0;
+  list-style: none;
+}
+.chip {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background: #fff;
+}
+
+/* Safety: if any leftover portrait container exists from old markup, hide it */
+#about .section__pic-container { display: none !important; }
+
+/* Keep the down arrow nicely spaced from content */
+#about .arrow {
+  margin-top: 1.25rem;
+}
+
+
 
 
