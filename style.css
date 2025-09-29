@@ -626,5 +626,76 @@ footer p {
   cursor: pointer;
 }
 
+/* ===== Global section spacing (more breathing room) ===== */
+#profile, #about, #experience, #projects, #contact {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+/* ===== Projects: vertical layout, tidy spacing, consistent actions ===== */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card { display: block !important; width: 100%; }
+.project-hero { margin-bottom: 1rem; }
+.project-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  cursor: zoom-in;
+}
+
+.project-body { text-align: left; }
+.project-title { margin: 0.4rem 0 0.6rem; text-align: left; }
+.project-desc { margin: 0 0 0.85rem 0; line-height: 1.8; }
+.project-meta { margin: 0 0 0.85rem 1rem; }
+.project-meta li { margin: 0.25rem 0; }
+
+.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.25rem 0 0.9rem;
+}
+.thumbs img {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: transform 0.12s ease;
+}
+.thumbs img:hover { transform: scale(1.03); }
+
+/* Consistent button placement */
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem; z-index: 9999;
+}
+.lightbox.hidden { display: none; }
+#lightbox-img { max-width: 95vw; max-height: 90vh; border-radius: 12px; }
+.lightbox-close {
+  position: absolute; top: 14px; right: 18px;
+  border: 0; background: transparent; color: #fff;
+  font-size: 2.25rem; line-height: 1; cursor: pointer;
+}
+
+
+
 
 
