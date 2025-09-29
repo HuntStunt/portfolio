@@ -268,13 +268,13 @@
     
         <!-- 1) Real-Time Multiplayer Card Game -->
         <article class="details-container color-container project-card" id="proj-bluffer">
-          <!-- Images first: large hero always visible -->
+          <!-- Large hero image (always visible) -->
           <div class="project-hero">
-            <img src="./assets/bluffer-hero.png" alt="Bluffer.io — gameplay (hero)"
-                 class="project-hero-img" data-lightbox="./assets/bluffer-hero.png" />
+            <img id="hero-bluffer" class="project-hero-img"
+                 src="./assets/bluffer-hero.png"
+                 alt="Bluffer.io — gameplay (hero)" />
           </div>
     
-          <!-- Description block -->
           <div class="project-body">
             <h2 class="project-title">Real-Time Multiplayer Card Game</h2>
             <p class="project-desc">
@@ -283,38 +283,42 @@
               brief network drops, and see live state sync across clients.
             </p>
             <ul class="project-meta">
-              <li><strong>My role:</strong> Product &amp; project lead — gameplay design, UI/UX flows, all artwork
-                  &amp; visual style, player-experience tuning (latency/perf polish), QA &amp; playtesting, and
-                  community feedback loop.</li>
+              <li><strong>My role:</strong> Product &amp; project lead — gameplay design, UI/UX flows, all artwork &amp; visual style,
+                  player-experience tuning (latency/perf polish), QA &amp; playtesting, and community feedback loop.</li>
               <li><strong>Tech:</strong> React, Node/Express, Socket.io, MongoDB, JWT/OAuth (team stack).</li>
             </ul>
     
-            <!-- Static thumbs (open full image in lightbox; no hero swapping) -->
+            <!-- Thumbs BELOW hero. Clicking swaps the hero image. -->
             <div class="thumbs">
-              <img src="./assets/card1.png" alt="Bluffer — table view" loading="lazy"
-                   data-lightbox="./assets/card1.png" />
-              <img src="./assets/card2.png" alt="Bluffer — leaderboard" loading="lazy"
-                   data-lightbox="./assets/card2.png" />
+              <img class="js-swap" data-hero="#hero-bluffer" data-src="./assets/bluffer-hero.png"
+                   src="./assets/bluffer-hero.png" alt="Bluffer — gameplay overview" aria-current="true" />
+              <img class="js-swap" data-hero="#hero-bluffer" data-src="./assets/card1.png"
+                   src="./assets/card1.png" alt="Bluffer — table view" />
+              <img class="js-swap" data-hero="#hero-bluffer" data-src="./assets/card2.png"
+                   src="./assets/card2.png" alt="Bluffer — leaderboard" />
             </div>
     
             <div class="project-actions">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://bluffer.io'">Live Demo</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://bluffer.io'">
+                Live Demo
+              </button>
             </div>
           </div>
         </article>
     
         <!-- 2) AI-Powered Resume Checker -->
-        <article class="details-container color-container project-card" id="proj-resume">
+        <article class="details-container color-container project-card project-card--resume" id="proj-resume">
           <div class="project-hero">
-            <img src="./assets/resume-checker-hero.png" alt="Resume–Job Match — UI (hero)"
-                 class="project-hero-img" data-lightbox="./assets/resume-checker-hero.png" />
+            <img id="hero-resume" class="project-hero-img"
+                 src="./assets/resume-checker-hero.png"
+                 alt="Resume–Job Match — UI (hero)" />
           </div>
     
           <div class="project-body">
             <h2 class="project-title">AI-Powered Resume Checker</h2>
             <p class="project-desc">
               End-to-end ML/NLP pipeline that evaluates resume–job fit and generates section-aware feedback.
-              Uses Sentence-BERT embeddings + engineered features (section coverage, term gaps, experience/education checks)
+              Uses Sentence-BERT embeddings plus engineered features (section coverage, term gaps, experience/education checks)
               with an XGBoost model and calibrated probabilities to produce clear, actionable guidance.
             </p>
             <ul class="project-meta">
@@ -324,10 +328,12 @@
             </ul>
     
             <div class="thumbs">
-              <img src="./assets/resume1.png" alt="Resume checker — scoring view" loading="lazy"
-                   data-lightbox="./assets/resume1.png" />
-              <img src="./assets/resume2.png" alt="Resume checker — feedback view" loading="lazy"
-                   data-lightbox="./assets/resume2.png" />
+              <img class="js-swap" data-hero="#hero-resume" data-src="./assets/resume-checker-hero.png"
+                   src="./assets/resume-checker-hero.png" alt="Resume checker — overview" aria-current="true" />
+              <img class="js-swap" data-hero="#hero-resume" data-src="./assets/resume1.png"
+                   src="./assets/resume1.png" alt="Resume checker — scoring view" />
+              <img class="js-swap" data-hero="#hero-resume" data-src="./assets/resume2.png"
+                   src="./assets/resume2.png" alt="Resume checker — feedback view" />
             </div>
     
             <div class="project-actions">
@@ -339,19 +345,13 @@
           </div>
         </article>
     
-        <!-- 3) Around Me — Android LBS App -->
+        <!-- 3) Around Me — four screenshots side by side (no hero, no thumbs) -->
         <article class="details-container color-container project-card" id="proj-android">
-          <div class="project-hero">
-            <img src="./assets/around1.png" alt="Around Me — map view (hero)"
-                 class="project-hero-img" data-lightbox="./assets/around1.png" />
-          </div>
-    
           <div class="project-body">
             <h2 class="project-title">Around Me — Android LBS App</h2>
             <p class="project-desc">
-              Location-based Android app to find nearby places with category filters, details, directions,
-              and favorites. Implements sign-in and synced state with Firebase; integrates Google Maps/Places
-              for accurate search and navigation.
+              Location-based Android app to find nearby places with category filters, details, directions, and favorites.
+              Implements sign-in and synced state with Firebase; integrates Google Maps/Places for accurate search and navigation.
             </p>
             <ul class="project-meta">
               <li><strong>My role:</strong> Sole Android developer — screens &amp; flows, maps &amp; places integration,
@@ -359,13 +359,12 @@
               <li><strong>Tech:</strong> Java, Firebase Auth/Realtime DB, Google Maps &amp; Places APIs.</li>
             </ul>
     
-            <div class="thumbs">
-              <img src="./assets/around2.png" alt="Around Me — categories" loading="lazy"
-                   data-lightbox="./assets/around2.png" />
-              <img src="./assets/around3.png" alt="Around Me — details screen" loading="lazy"
-                   data-lightbox="./assets/around3.png" />
-              <img src="./assets/around4.png" alt="Around Me — favorites" loading="lazy"
-                   data-lightbox="./assets/around4.png" />
+            <!-- 4 images in a neat row/grid -->
+            <div class="image-row">
+              <img src="./assets/around1.png" alt="Around Me — map view" />
+              <img src="./assets/around2.png" alt="Around Me — categories" />
+              <img src="./assets/around3.png" alt="Around Me — details" />
+              <img src="./assets/around4.png" alt="Around Me — favorites" />
             </div>
     
             <div class="project-actions">
@@ -389,19 +388,12 @@
               <li><strong>My role:</strong> Full-stack developer — catalog, search/filter logic, user auth, admin tools.</li>
               <li><strong>Tech:</strong> HTML/CSS/JS, Node/Express, MongoDB, REST APIs.</li>
             </ul>
-    
-            <div class="project-actions"><!-- Intentionally no external link --></div>
           </div>
         </article>
     
       </div>
-    
-      <!-- Shared lightbox -->
-      <div id="lightbox" class="lightbox hidden" aria-hidden="true">
-        <button class="lightbox-close" aria-label="Close viewer">&times;</button>
-        <img id="lightbox-img" alt="Full-size project image" />
-      </div>
     </section>
+
 
 
 
@@ -409,34 +401,32 @@
     <section id="contact">
       <h1 class="title">Contact Me</h1>
     
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p><a href="mailto:rash.faraz@gmail.com">rash.faraz@gmail.com</a></p>
+      <div class="contact-list">
+        <div class="contact-row">
+          <img src="./assets/email.png" class="icon contact-icon" alt="Email" />
+          <a href="mailto:rash.faraz@gmail.com">rash.faraz@gmail.com</a>
         </div>
-    
-        <div class="contact-info-container">
-          <img src="./assets/phone.png" alt="Phone icon" class="icon contact-icon" />
-          <p><a href="tel:+447874156907">+44 7874 156907</a></p>
+        <div class="contact-row">
+          <img src="./assets/phone.png" class="icon contact-icon" alt="Phone" />
+          <a href="tel:+447874156907">+44 7874 156907</a>
         </div>
-    
-        <div class="contact-info-container">
-          <img src="./assets/location.png" alt="Location icon" class="icon contact-icon" />
-          <p>Saint George's Square, E7 8HW</p>
+        <div class="contact-row">
+          <img src="./assets/location.png" class="icon contact-icon" alt="Location" />
+          <span>Saint George's Square, E7 8HW</span>
         </div>
-    
-        <div class="contact-info-container">
-          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-          <p><a href="https://www.linkedin.com/in/rasheeqahmedfaraz" target="_blank" rel="noopener">
-            linkedin.com/in/rasheeqahmedfaraz</a></p>
+        <div class="contact-row">
+          <img src="./assets/linkedin.png" class="icon contact-icon" alt="LinkedIn" />
+          <a href="https://www.linkedin.com/in/rasheeqahmedfaraz" target="_blank" rel="noopener">
+            linkedin.com/in/rasheeqahmedfaraz
+          </a>
         </div>
-    
-        <div class="contact-info-container">
-          <img src="./assets/github.png" alt="GitHub icon" class="icon contact-icon" />
-          <p><a href="https://github.com/HuntStunt" target="_blank" rel="noopener">github.com/HuntStunt</a></p>
+        <div class="contact-row">
+          <img src="./assets/github.png" class="icon contact-icon" alt="GitHub" />
+          <a href="https://github.com/HuntStunt" target="_blank" rel="noopener">github.com/HuntStunt</a>
         </div>
       </div>
     </section>
+
 
 
     <!-- FOOTER -->
