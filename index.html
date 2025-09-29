@@ -270,110 +270,155 @@
 
     <!-- PROJECTS -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- Project 1: Bluffer.io -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/bluffer-hero.png"
-                alt="Real-Time Multiplayer Card Game (Bluffer.io)"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Real-Time Multiplayer Card Game</h2>
+    
+      <div class="projects-list">
+    
+        <!-- Project 1: Real-Time Multiplayer Card Game -->
+        <article class="details-container color-container project-card" id="proj-bluffer">
+          <div class="project-hero">
+            <!-- Hero image is fully shown; click opens full-size -->
+            <img
+              src="./assets/bluffer-hero.png"
+              alt="Bluffer.io gameplay — hero"
+              class="project-hero-img"
+              data-lightbox="./assets/bluffer-hero.png"
+            />
+          </div>
+    
+          <div class="project-body">
+            <h2 class="project-title">Real-Time Multiplayer Card Game</h2>
             <p class="project-desc">
               Online bluffing card game with real-time rooms, reconnect safety, and leaderboard.
-              Node/Express + Socket.io, MongoDB; React front end with JWT + OAuth.
+              Stack: Node/Express + Socket.io, MongoDB; React front end with JWT + OAuth.
             </p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Co-founder &amp; full-stack engineer — real-time server, matchmaking, reconnect logic, React UI.</li>
+              <li><strong>Tools:</strong> React, Node, Express, Socket.io, MongoDB, JWT/OAuth.</li>
+            </ul>
+    
+            <!-- Thumbnails (click to swap hero; click any image to open full-size) -->
+            <div class="thumbs">
+              <img src="./assets/card1.png" alt="Bluffer — screenshot 1" loading="lazy"
+                   data-src="./assets/card1.png" data-hero="#proj-bluffer .project-hero-img"
+                   data-lightbox="./assets/card1.png" />
+              <img src="./assets/card2.png" alt="Bluffer — screenshot 2" loading="lazy"
+                   data-src="./assets/card2.png" data-hero="#proj-bluffer .project-hero-img"
+                   data-lightbox="./assets/card2.png" />
+            </div>
+    
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://bluffer.io'"
-              >
-                Live Demo
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/HuntStunt'"
-              >
-                GitHub
-              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://bluffer.io'">Live Demo</button>
             </div>
           </div>
-
-          <!-- Project 2: AI Resume Checker -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/resume-checker-hero.png"
-                alt="AI-Powered Resume Checker"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">AI-Powered Resume Checker</h2>
+        </article>
+    
+        <!-- Project 2: AI-Powered Resume Checker -->
+        <article class="details-container color-container project-card" id="proj-resume">
+          <div class="project-hero">
+            <img
+              src="./assets/resume-checker-hero.png"
+              alt="Resume-Job Match — hero"
+              class="project-hero-img"
+              data-lightbox="./assets/resume-checker-hero.png"
+            />
+          </div>
+    
+          <div class="project-body">
+            <h2 class="project-title">AI-Powered Resume Checker</h2>
             <p class="project-desc">
-              ML/NLP pipeline that scores resume–job fit and gives section-aware feedback using
-              SBERT + engineered features + XGBoost with calibrated probabilities.
+              ML/NLP pipeline that scores resume–job fit and gives section-aware feedback using SBERT +
+              engineered features + XGBoost with calibrated probabilities.
             </p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Designer &amp; developer — feature engineering, model training, evaluation &amp; reporting.</li>
+              <li><strong>Tools:</strong> Python, scikit-learn, PyTorch/TensorFlow (SBERT), XGBoost, pandas, NumPy.</li>
+            </ul>
+    
+            <div class="thumbs">
+              <img src="./assets/resume1.png" alt="Resume checker — screenshot 1" loading="lazy"
+                   data-src="./assets/resume1.png" data-hero="#proj-resume .project-hero-img"
+                   data-lightbox="./assets/resume1.png" />
+              <img src="./assets/resume2.png" alt="Resume checker — screenshot 2" loading="lazy"
+                   data-src="./assets/resume2.png" data-hero="#proj-resume .project-hero-img"
+                   data-lightbox="./assets/resume2.png" />
+            </div>
+    
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/HuntStunt/intelligent-resume-screening'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/HuntStunt/intelligent-resume-screening#readme'"
-              >
-                Overview
+              <button class="btn btn-color-2 project-btn"
+                      onclick="location.href='https://github.com/HuntStunt/intelligent-resume-screening'">
+                GitHub Repo
               </button>
             </div>
           </div>
-
-          <!-- Project 3: Around Me (Android) -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/around1.png"
-                alt="Around Me — Android LBS App"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Around Me — Android LBS App</h2>
+        </article>
+    
+        <!-- Project 3: Around Me — Android LBS App -->
+        <article class="details-container color-container project-card" id="proj-android">
+          <div class="project-hero">
+            <img
+              src="./assets/around1.png"
+              alt="Around Me app — hero"
+              class="project-hero-img"
+              data-lightbox="./assets/around1.png"
+            />
+          </div>
+    
+          <div class="project-body">
+            <h2 class="project-title">Around Me — Android LBS App</h2>
             <p class="project-desc">
-              Nearby POIs with filters, details, directions, and favorites. Firebase for auth/RTDB;
-              Google Maps/Places.
+              Nearby points-of-interest with filters, details, directions, and favorites. Firebase for auth/RTDB;
+              Google Maps/Places integration.
             </p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Android developer — UI flows, location &amp; maps, data sync.</li>
+              <li><strong>Tools:</strong> Java, Firebase Auth/Realtime DB, Google Maps &amp; Places APIs.</li>
+            </ul>
+    
+            <div class="thumbs">
+              <img src="./assets/around2.png" alt="Around Me — screenshot 2" loading="lazy"
+                   data-src="./assets/around2.png" data-hero="#proj-android .project-hero-img"
+                   data-lightbox="./assets/around2.png" />
+              <img src="./assets/around3.png" alt="Around Me — screenshot 3" loading="lazy"
+                   data-src="./assets/around3.png" data-hero="#proj-android .project-hero-img"
+                   data-lightbox="./assets/around3.png" />
+              <img src="./assets/around4.png" alt="Around Me — screenshot 4" loading="lazy"
+                   data-src="./assets/around4.png" data-hero="#proj-android .project-hero-img"
+                   data-lightbox="./assets/around4.png" />
+            </div>
+    
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='./Around-Me.docx.pdf'"
-              >
-                More Info (PDF)
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/HuntStunt'"
-              >
-                GitHub
+              <button class="btn btn-color-2 project-btn" onclick="location.href='./Around-Me.docx.pdf'">
+                Project PDF
               </button>
             </div>
           </div>
-        </div>
+        </article>
+    
+        <!-- Project 4: Element Gaming — no images -->
+        <article class="details-container color-container project-card" id="proj-element">
+          <div class="project-body">
+            <h2 class="project-title">Element Gaming — Digital Games E-commerce</h2>
+            <p class="project-desc">
+              Undergrad project building a digital game store: browse/search/filter, product pages, cart/wishlist,
+              user accounts, and an admin panel (payments omitted).
+            </p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Full-stack contributor — catalog, search/filter, user accounts, admin views.</li>
+              <li><strong>Tools:</strong> HTML/CSS/JS, Node/Express, MongoDB, REST APIs.</li>
+            </ul>
+          </div>
+        </article>
+    
       </div>
-
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+    
+      <!-- Lightbox (shared for all images) -->
+      <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close viewer">&times;</button>
+        <img id="lightbox-img" alt="Full-size project image" />
+      </div>
     </section>
+
 
     <!-- CONTACT -->
     <section id="contact">
