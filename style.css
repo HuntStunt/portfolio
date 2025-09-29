@@ -695,6 +695,92 @@ footer p {
   font-size: 2.25rem; line-height: 1; cursor: pointer;
 }
 
+/* ===== More vertical space between sections ===== */
+#profile, #about, #experience, #projects, #contact {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+/* ===== Projects: hero + thumbs below, neat spacing ===== */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.project-card { width: 100%; }
+.project-hero { margin-bottom: 1rem; }
+.project-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+.project-card--resume .project-hero-img {
+  max-height: 480px;       /* keep resume hero from getting too tall */
+  width: 100%;
+  object-fit: contain;     /* no cropping for UI screenshots */
+  background: #f7f7f7;
+}
+.project-body { text-align: left; }
+.project-title { margin: 0.4rem 0 0.6rem; text-align: left; }
+.project-desc { margin: 0 0 0.85rem 0; line-height: 1.8; }
+.project-meta { margin: 0 0 0.85rem 1rem; }
+.project-meta li { margin: 0.25rem 0; }
+
+.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.25rem 0 1rem;
+}
+.thumbs img {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: transform 0.12s ease;
+}
+.thumbs img:hover { transform: scale(1.03); }
+.thumbs img[aria-current="true"] { outline: 2px solid rgba(0,0,0,0.65); }
+
+/* Around Me: 4 screenshots side by side */
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  margin: 0 0 1rem 0;
+}
+.image-row img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Consistent button placement */
+.project-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start;
+}
+
+/* ===== Contact: stacked, one per row ===== */
+#contact .contact-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+#contact .contact-row {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  gap: 0.6rem;
+}
 
 
 
